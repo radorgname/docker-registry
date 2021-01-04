@@ -1,10 +1,13 @@
 description: >
   This is a sample executor using Docker and Node.
 docker:
-  - image: 'cimg/node:<<parameters.tag>>'
+  - image: "<<parameter.image>>"
+    auth:
+      username: $DOCKER_LOGIN
+      password: $DOCKER_PASSWORD
 parameters:
-  tag:
-    default: lts
+  image:
+    default: circleci/buildpack-deps:stable
     description: >
       Pick a specific circleci/node image variant:
       https://hub.docker.com/r/cimg/node/tags

@@ -1,0 +1,6 @@
+description: >
+  Login to Dockerhub and setup remote docker
+
+steps:
+  - setup_remote_docker:
+      docker_layer_caching: true
