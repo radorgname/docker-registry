@@ -1,7 +1,7 @@
 description: >
   This is a sample executor using Docker and Node.
 docker:
-  - image: "<<parameter.image>>"
+  - image: <<parameter.image>>
     auth:
       username: $DOCKER_LOGIN
       password: $DOCKER_PASSWORD
